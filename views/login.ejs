@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login To Twitter</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #141d26;
+            /* Twitter's dark background color */
+            color: white;
+            font-family:cursive;
+        }
+
+        #container {
+            width: 1000px;
+            margin: 0 auto;
+        }
+
+        #header {
+            width: 1000px;
+            background-color: #1da1f2;
+            /* Twitter's blue color */
+            height: 50px;
+            color: white;
+            font-size: 30px;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        h3 {
+            text-align: center;
+        }
+
+        form {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        table {
+            width: 500px;
+            border: 2px solid #1da1f2;
+            /* Twitter's blue color */
+            margin: 0 auto;
+        }
+
+        table td {
+            padding: 10px;
+        }
+
+        table input[type="text"],
+        table input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        table input[type="submit"] {
+            background-color: #1da1f2;
+            /* Twitter's blue color */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        table input[type="submit"]:hover {
+            background-color: #0d8bf0;
+            /* Darker shade on hover */
+        }
+
+        div a {
+            color: #1da1f2;
+            /* Twitter's blue color */
+            text-decoration: none;
+        }
+
+        div a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="header">Login To Twitter</div>
+        <h3>
+            <%=msg%>
+        </h3>
+        <form action="/login_submit" method="post">
+            <table>
+                <tr>
+                    <td>Enter Email or mobile number</td>
+                    <td><input type="text" name="email"></td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td><input type="password" name="pass"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="submit" name="Login"></td>
+                </tr>
+            </table>
+            <div>
+                <a href="/signup">Don't have an Account. Please click to Register</a>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

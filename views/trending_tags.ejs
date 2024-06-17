@@ -1,0 +1,32 @@
+<div class="tags">
+    <h3>Trending Tags</h3>
+    <% for(var i=0;i<tags.length;i++){ %>
+        <div class="tag">
+            <div class="tag2">
+                <%= tags[i].tagname%>
+            </div>
+            <div class="tag3">
+                <%= tags[i].tag_count%> Tweets
+            </div>
+        </div>
+        <% } %>
+</div>
+</div>
+</body>
+<script>
+    let el = document.getElementById(`myTextarea`);
+    el.addEventListener("input", function () {
+        var initialHeight = el.style.height;
+
+        el.style.height = 'auto';
+
+        el.style.height = Math.max(el.scrollHeight, el.clientHeight) + 'px';
+
+        if (el.scrollHeight < el.clientHeight) {
+            el.style.height = initialHeight;
+        }
+    });
+
+</script>
+
+</html>
