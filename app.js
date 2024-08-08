@@ -12,8 +12,6 @@ app.use(express.static((__dirname + "/public")));
 
 const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
-
-
 var storage = multer.diskStorage({
     destination: (req, file, cb) => {
         cb(null, "public/uploads/");
